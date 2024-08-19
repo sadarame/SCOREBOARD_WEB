@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.l-sidebar {
+    flex: 0 0 25%;
+    max-width: 25%;
+    background-color: #f0f0f0;
+    /* padding: 10px; */
+    border-radius: 5px;
+}
+
+.l-sidebar h2 {
+    font-size: 1＿8px;
+    margin-top: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #99FF99; /* 任意で背景色を設定 */
+    border-radius: 5px;
+    
+}
+
+.board-section {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.bb-score__item {
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.bb-score__content {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.bb-score__description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bb-score__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.bb-score__team {
+    display: flex;
+    align-items: center;
+}
+
+.bb-score__score {
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.bb-score__link {
+    font-size: 14px;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* 基本的なスタイルはそのまま */
+.team-list {
+    display: flex;
+    flex-direction: column; /* Flexboxで縦並びに設定 */
+    align-items: center; /* 子要素を中央寄せ */
+
+}
+
+
+/* モバイル向けのスタイル */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .l-sidebar {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .board-section {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+    
+    .bb-score__item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    
+}

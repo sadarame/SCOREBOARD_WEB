@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チームスコアボード</title>
+    <link rel="stylesheet" href="css/scoreboard.css">
+</head>
+
+<body>
+    <header>
+        <h1>チームスコアボード</h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">チーム選択</a></li>
+                <li><a href="#">設定</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <aside id="sidebar" class="l-sidebar">
+            <h2>チームリスト</h2>
+            <div class="team-list">
+                <a href="#">チームA</a>
+                <a href="#">チームB</a>
+                <a href="#">チームC</a>
+            </div>
+        </aside>
+
+        <main class="board-section">
+            <div class="image-section">
+                <div class="bb-score__item">
+                    <a class="bb-score__content" href="#">
+                        <p class="bb-score__description">
+                            <span class="bb-score__date">2024-06-09</span>
+                            <span class="bb-score__venue">エスコンF</span>
+                        </p>
+                        <div class="bb-score__status">
+                            <div class="bb-score__team">
+                                <!-- ロゴを考慮したエリアっぽい -->
+                                <!-- <span class="bb-score__homeLogo bb-score__homeLogo--npbTeam8"></span> -->
+                                <span>チームA</span>
+                            </div>
+
+                            <span class="bb-score__score">3</span>
+                            <span class="bb-score__score">-</span>
+                            <span class="bb-score__score">2</span>
+
+                            <div class="bb-score__team">
+                                <span>チームB</span>
+                                <span class="bb-score__awayLogo bb-score__awayLogo--npbTeam3"></span>
+                            </div>
+                        </div>
+                        <p class="bb-score__link">試合終了</p>
+                    </a>
+                </div>
+                <div class="bb-score__item">
+                    <a class="bb-score__content" href="#">
+                        <p class="bb-score__description">
+                            <span class="bb-score__date">2024-06-08</span>
+                            <span class="bb-score__venue">東京ドーム</span>
+                        </p>
+                        <div class="bb-score__status">
+                            <div class="bb-score__team">
+                                <span class="bb-score__homeLogo bb-score__homeLogo--npbTeam8"></span>
+                                <span>チームC</span>
+
+                            </div>
+
+                            <!-- //スコアエリア -->
+                            <span class="bb-score__score">1</span>
+                            <span class="bb-score__score">-</span>
+                            <span class="bb-score__score">1</span>
+
+                            <div class="bb-score__team">
+                                <span>チームD</span>
+                                <span class="bb-score__awayLogo bb-score__awayLogo--npbTeam3"></span>
+                            </div>
+                        </div>
+                        <p class="bb-score__link">試合中</p>
+                    </a>
+                </div>
+                <div class="bb-score__item">
+                    <a class="bb-score__content" href="#">
+                        <p class="bb-score__description">
+                            <span class="bb-score__date">2024-06-07</span>
+                            <span class="bb-score__venue">甲子園</span>
+                        </p>
+                        <div class="bb-score__status">
+                            <div class="bb-score__team">
+                                <span class="bb-score__homeLogo bb-score__homeLogo--npbTeam8"></span>
+                                <span>チームE</span>
+
+                            </div>
+
+                            <span class="bb-score__score">0</span>
+                            <span class="bb-score__score">-</span>
+                            <span class="bb-score__score">4</span>
+
+                            <div class="bb-score__team">
+                                <span>チームF</span>
+                                <span class="bb-score__awayLogo bb-score__awayLogo--npbTeam3"></span>
+                            </div>
+                        </div>
+                        <p class="bb-score__link">試合終了</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 スコアボード</p>
+    </footer>
+    <script src="js/board.js"></script>
+</body>
+
+</html>

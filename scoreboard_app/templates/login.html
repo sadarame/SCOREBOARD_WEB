@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スコアボード - ログイン</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>スコアボード</h1>
+            <img src="logo.png" alt="ロゴ" class="logo">
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="image-section">
+                <div class="bb-score__item">
+                    <a class="bb-score__content" href="#">
+                        <p class="bb-score__description">
+                            <span class="bb-score__date">2024-06-09</span>
+                            <span class="bb-score__venue">エスコンF</span>
+                        </p>
+                        <div class="bb-score__status">
+                            <div class="bb-score__team">
+                                <span class="bb-score__homeLogo bb-score__homeLogo--npbTeam8"></span>
+                                <span>チームA</span>
+                                <span class="bb-score__score">3</span>
+                            </div>
+                            <span class="bb-score__score">-</span>
+                            <div class="bb-score__team">
+                                <span class="bb-score__score">2</span>
+                                <span>チームB</span>
+                                <span class="bb-score__awayLogo bb-score__awayLogo--npbTeam3"></span>
+                            </div>
+                        </div>
+                        <p class="bb-score__link">試合終了</p>
+                    </a>
+                </div>
+                <div class="bb-score__item">
+                    <a class="bb-score__content" href="#">
+                        <p class="bb-score__description">
+                            <span class="bb-score__date">2024-06-08</span>
+                            <span class="bb-score__venue">東京ドーム</span>
+                        </p>
+                        <div class="bb-score__status">
+                            <div class="bb-score__team">
+                                <span class="bb-score__homeLogo bb-score__homeLogo--npbTeam8"></span>
+                                <span>チームC</span>
+                                <span class="bb-score__score">1</span>
+                            </div>
+                            <span class="bb-score__score">-</span>
+                            <div class="bb-score__team">
+                                <span class="bb-score__score">1</span>
+                                <span>チームD</span>
+                                <span class="bb-score__awayLogo bb-score__awayLogo--npbTeam3"></span>
+                            </div>
+                        </div>
+                        <p class="bb-score__link">試合中</p>
+                    </a>
+                </div>
+                <div class="bb-score__item">
+                    <a class="bb-score__content" href="#">
+                        <p class="bb-score__description">
+                            <span class="bb-score__date">2024-06-07</span>
+                            <span class="bb-score__venue">甲子園</span>
+                        </p>
+                        <div class="bb-score__status">
+                            <div class="bb-score__team">
+                                <span class="bb-score__homeLogo bb-score__homeLogo--npbTeam8"></span>
+                                <span>チームE</span>
+                                <span class="bb-score__score">0</span>
+                            </div>
+                            <span class="bb-score__score">-</span>
+                            <div class="bb-score__team">
+                                <span class="bb-score__score">4</span>
+                                <span>チームF</span>
+                                <span class="bb-score__awayLogo bb-score__awayLogo--npbTeam3"></span>
+                            </div>
+                        </div>
+                        <p class="bb-score__link">試合終了</p>
+                    </a>
+                </div>
+            </div>
+            <div class="login-section">
+                <h2>ソーシャルログイン</h2>
+                <!-- <button class="social-login-btn google">Googleでログイン</button> -->
+                <a class="social-login-btn google" href="/login">Google Login</a>
+                
+                <button class="social-login-btn facebook">Facebookでログイン</button>
+                <button class="social-login-btn twitter">Twitterでログイン</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

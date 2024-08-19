@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/bal0002-001.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 68, 204, 0.8); /* 背景画像に対して透過 */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.login-section, .image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ログインのところ */
+.login-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: White;
+    margin: 10px;
+    border-radius: 5%;
+}
+
+/* スコアボードのクラス */
+.image-section {
+    margin: 10px;
+    border-radius: 5%;
+    background-color: rgba(241, 241, 241, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-login-btn {
+    display: block;
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.social-login-btn.google { background-color: #db4437; }
+.social-login-btn.facebook { background-color: #3b5998; }
+.social-login-btn.twitter { background-color: #1da1f2; }
+
+.bb-score__item {
+    list-style: none;
+    width: 90%;
+    max-width: 400px;
+    background: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.bb-score__content {
+    text-decoration: none;
+    color: black;
+}
+
+.bb-score__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bb-score__status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.bb-score__team {
+    display: flex;
+    align-items: center;
+}
+
+.bb-score__homeLogo,
+.bb-score__awayLogo {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.bb-score__homeLogo:before,
+.bb-score__awayLogo:before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.bb-score__score {
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.bb-score__link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .slides {
+        align-items: flex-start;
+    }
+}

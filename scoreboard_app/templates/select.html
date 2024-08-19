@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>スポーツチーム選択</title>
+        <link rel="stylesheet" href="/static/css/select.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>スポーツチーム選択</h1>
+            <div class="accordion">
+                {% for category, leagues in category_dict.items() %}
+                <div class="accordion-item">
+                    <button class="accordion-button">{{ category }}</button>
+                    <div class="accordion-content">
+                        {% for league, teams in leagues.items() %}
+                        <div class="accordion-sub-item">
+                            <button class="accordion-button">{{ league }}</button>
+                            <div class="accordion-content">
+                                <ul>
+                                    {% for team in teams %}
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="{{ league }}" value="{{ team['teamShortNM'] }}">
+                                            {{ team['teamLongNM'] }}
+                                        </label>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <script src="/static/js/select.js"></script>
+    </body>
+</html>
