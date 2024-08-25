@@ -1,5 +1,5 @@
 # from FirestoreHandler import FirestoreHandler
-from ..Logic.Firestore.FirestoreHandler import FirestoreHandler
+from ..Logic.FireStore.FirestoreHandler import FirestoreHandler
 
 class SelectAction:
 
