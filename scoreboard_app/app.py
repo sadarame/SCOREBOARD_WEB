@@ -180,6 +180,16 @@ def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()
 
 
+# チーム選択した際に呼ばれる
+@app.route('/submit_teams', methods=['POST'])
+def submit_teams():
+    selected_teams = {}
+    for league in request.form.keys():
+        selected_teams[league] = request.form.getlist(league)
+    
+    return f"選択されたチーム: {selected_teams}"
+
+
 if __name__ == "__main__":
     app.run(ssl_context="adhoc",debug=True)
 

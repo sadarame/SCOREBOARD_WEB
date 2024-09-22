@@ -10,34 +10,38 @@
 
     <body>
         <div class="container">
-            <h1>スポーツチーム選択</h1>
-            <div class="accordion">
-                {% for category, leagues in category_dict.items() %}
-                <div class="accordion-item">
-                    <button class="accordion-button">{{ category }}</button>
-                    <div class="accordion-content">
-                        {% for league, teams in leagues.items() %}
-                        <div class="accordion-sub-item">
-                            <button class="accordion-button">{{ league }}</button>
-                            <div class="accordion-content">
-                                <ul>
-                                    {% for team in teams %}
-                                    <li>
-                                        <label>
-                                            <input type="checkbox" name="{{ league }}" value="{{ team['teamShortNM'] }}">
-                                            {{ team['teamLongNM'] }}
-                                        </label>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
+            <form action="/submit_teams" method="post">
+                <h1>スポーツチーム選択</h1>
+                <div class="accordion">
+                    {% for category, leagues in category_dict.items() %}
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button">{{ category }}</button>
+                        <div class="accordion-content">
+                            {% for league, teams in leagues.items() %}
+                            <div class="accordion-sub-item">
+                                <button class="accordion-button" type="button">{{ league }}</button>
+                                <div class="accordion-content">
+                                    <ul>
+                                        {% for team in teams %}
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="{{ league }}" value="{{ team['teamShortNM'] }}">
+                                                {{ team['teamLongNM'] }}
+                                            </label>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
+                <button type="submit">送信</button>
+            </form>
         </div>
         <script src="/static/js/select.js"></script>
     </body>
+    
 </html>
